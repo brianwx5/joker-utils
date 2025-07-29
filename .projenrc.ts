@@ -120,6 +120,7 @@ function setupDevelopmentTools(project: typescript.TypeScriptProject) {
     'check:deps': 'depcheck',
     'check:circular': 'madge --circular src/',
     'update:deps': 'ncu -u',
+    'lint:fix': 'npx projen eslint',
   });
 }
 
