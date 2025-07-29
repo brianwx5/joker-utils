@@ -22,6 +22,12 @@ function setupHusky(project: typescript.TypeScriptProject) {
   });
 
   project.packageTask.env('HUSKY', '0'); // Disable husky in CI
+
+  // Automatically set up git hooks after installing dependencies
+  const postInstall = project.tasks.tryFind('post-install');
+  if (postInstall) {
+    postInstall.spawn(project.tasks.tryFind('setup-husky')!);
+  }
 }
 
 function setupCommitLint(project: typescript.TypeScriptProject) {
@@ -135,6 +141,7 @@ const project = new typescript.TypeScriptProject({
   // Package configuration
   defaultReleaseBranch: 'main',
   packageManager: NodePackageManager.NPM,
+  workflowNodeVersion: '20',
 
   // Disable npm publishing since you want GitHub only
   releaseToNpm: false,
