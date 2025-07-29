@@ -75,6 +75,9 @@
     "typedoc": "^0.28.8",
     "typescript": "5.7.x"
   },
+  "dependencies": {
+    "log4js": "^6.9.1"
+  },
   "keywords": [
     "utility",
     "typescript",
@@ -155,7 +158,6 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/npm",
       "@semantic-release/git",
       "@semantic-release/github"
     ]
