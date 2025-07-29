@@ -130,6 +130,7 @@ const project = new typescript.TypeScriptProject({
   description: 'A TypeScript utility library',
   authorName: 'The Joker Team',
   authorEmail: 'your.email@example.com',
+  projenrcTs: true,
 
   // Package configuration
   defaultReleaseBranch: 'main',
