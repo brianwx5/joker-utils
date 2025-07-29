@@ -51,7 +51,8 @@ function setupBuild(project: typescript.TypeScriptProject) {
     build: 'npm-run-all clean build:esbuild build:types',
     dev: 'node build.js --esm --cjs --sourcemap --watch',
     size: "node -e \"console.log(require('fs').statSync('dist/index.js').size + ' bytes')\"",
-    prepare: 'husky install',
+    prepare: 'npm run build && husky install',
+    prepublishOnly: 'npm run build',
   });
 }
 
@@ -120,7 +121,7 @@ function setupDevelopmentTools(project: typescript.TypeScriptProject) {
     'check:deps': 'depcheck',
     'check:circular': 'madge --circular src/',
     'update:deps': 'ncu -u',
-    'lint:fix': 'npx projen eslint',
+    'lint:fix': 'npx projen eslint --fix',
   });
 }
 

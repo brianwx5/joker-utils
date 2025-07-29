@@ -35,7 +35,7 @@
     "check:deps": "depcheck",
     "check:circular": "madge --circular src/",
     "update:deps": "ncu -u",
-    "lint:fix": "npx projen eslint"
+    "lint:fix": "npx projen eslint --fix"
   },
   "author": {
     "name": "The Joker Team",
