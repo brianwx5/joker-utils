@@ -213,4 +213,8 @@ setupDevelopmentTools(project);
 setupNodeVersion(project);
 project.addDeps('log4js');
 
+// Ensure ts-node compiles with CommonJS for Node 22 compatibility
+project.tsconfigDev.addOverride('compilerOptions.module', 'CommonJS');
+project.defaultTask?.reset('ts-node --project tsconfig.dev.json .projenrc.ts');
+
 project.synth();
