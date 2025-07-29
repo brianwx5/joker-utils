@@ -15,7 +15,7 @@ permissions-backup.acl
 !/lib/
 !/lib/**/*.js
 !/lib/**/*.d.ts
-dist
+!/dist/
 /tsconfig.json
 /.github/
 /.vscode/
