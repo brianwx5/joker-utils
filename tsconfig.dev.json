@@ -29,7 +29,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declarationMap": true,
-    "sourceMap": true,
     "moduleResolution": "node"
   },
   "include": [

@@ -183,7 +183,6 @@ const project = new typescript.TypeScriptProject({
       forceConsistentCasingInFileNames: true,
       declaration: true,
       declarationMap: true,
-      sourceMap: true,
       moduleResolution: TypeScriptModuleResolution.NODE,
     },
   },
