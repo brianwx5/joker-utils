@@ -41,15 +41,13 @@ function setupCommitLint(project: typescript.TypeScriptProject) {
 }
 
 function setupBuild(project: typescript.TypeScriptProject) {
-  project.addDevDeps('esbuild', 'npm-run-all', 'rimraf', 'ts-node');
+  project.addDevDeps('tsup', 'rimraf', 'ts-node');
 
-  // Add build scripts - using default options for simplified version
   project.addScripts({
     clean: 'rimraf dist lib',
-    'build:esbuild': 'node build.js --esm --cjs --minify --sourcemap',
-    'build:types': 'tsc --emitDeclarationOnly',
-    build: 'npm-run-all clean build:esbuild build:types',
-    dev: 'node build.js --esm --cjs --sourcemap --watch',
+    build: 'tsup',
+    'build:tsup': 'tsup',
+    dev: 'tsup --watch',
     size: "node -e \"console.log(require('fs').statSync('dist/index.js').size + ' bytes')\"",
     prepare: 'npm run build && husky install',
     prepublishOnly: 'npm run build',
@@ -185,6 +183,9 @@ const project = new typescript.TypeScriptProject({
       forceConsistentCasingInFileNames: true,
       declaration: true,
       declarationMap: true,
+      inlineSourceMap: false,
+      inlineSources: false,
+      sourceMap: true,
       moduleResolution: TypeScriptModuleResolution.NODE,
     },
   },

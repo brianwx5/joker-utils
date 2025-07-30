@@ -249,13 +249,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@commitlint/cli,@commitlint/config-conventional,@semantic-release/changelog,@semantic-release/git,@types/jest,@types/node,depcheck,esbuild,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,husky,jest,jest-environment-node,lint-staged,madge,npm-check-updates,npm-run-all,prettier,projen,rimraf,semantic-release,ts-jest,ts-node,typedoc,typescript,log4js"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@commitlint/cli,@commitlint/config-conventional,@semantic-release/changelog,@semantic-release/git,@types/jest,@types/node,depcheck,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,husky,jest,jest-environment-node,lint-staged,madge,npm-check-updates,prettier,projen,rimraf,semantic-release,ts-jest,ts-node,tsup,typedoc,typescript,log4js"
         },
         {
           "exec": "npm install"
         },
         {
-          "exec": "npm update @commitlint/cli @commitlint/config-conventional @semantic-release/changelog @semantic-release/git @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser commit-and-tag-version constructs depcheck esbuild eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint husky jest jest-environment-node jest-junit lint-staged madge npm-check-updates npm-run-all prettier projen rimraf semantic-release ts-jest ts-node typedoc typescript log4js"
+          "exec": "npm update @commitlint/cli @commitlint/config-conventional @semantic-release/changelog @semantic-release/git @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser commit-and-tag-version constructs depcheck eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint husky jest jest-environment-node jest-junit lint-staged madge npm-check-updates prettier projen rimraf semantic-release ts-jest ts-node tsup typedoc typescript log4js"
         },
         {
           "exec": "npx projen"
