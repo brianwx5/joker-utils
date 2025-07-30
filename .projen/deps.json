@@ -49,10 +49,6 @@
       "type": "build"
     },
     {
-      "name": "esbuild",
-      "type": "build"
-    },
-    {
       "name": "eslint-config-prettier",
       "type": "build"
     },
@@ -103,10 +99,6 @@
       "type": "build"
     },
     {
-      "name": "npm-run-all",
-      "type": "build"
-    },
-    {
       "name": "prettier",
       "type": "build"
     },
@@ -128,6 +120,10 @@
     },
     {
       "name": "ts-node",
+      "type": "build"
+    },
+    {
+      "name": "tsup",
       "type": "build"
     },
     {
