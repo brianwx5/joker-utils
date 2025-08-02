@@ -1,4 +1,4 @@
-import { logger } from './logger';
+import { logger, withContext } from './logger';
 
 export class Hello {
   public sayHello(): string {
@@ -7,4 +7,4 @@ export class Hello {
   }
 }
 
-export { logger };
+export { logger, withContext };
